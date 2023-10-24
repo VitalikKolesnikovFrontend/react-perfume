@@ -2,6 +2,7 @@
 function App() {
   return (
     <div className="wrapper clear">
+      
       <header className="d-flex justify-between align-center">
         <div className="headerLeft d-flex align-center">
           <img width={40} height={40} src="/img/logo.png" alt="logo"/>
@@ -21,9 +22,18 @@ function App() {
           </ul>
       </header>
       <div className="content p-45">
-        <h1 className="mb-40">ВСЕ ТОВАРЫ</h1>
+        <div className="d-flex align-center mb-40 justify-between">
+          <h1>ВСЕ ТОВАРЫ</h1>
+          <div className="search-block d-flex">
+            <img className="search" src="/img/search.svg" alt="search"/>
+            <input placeholder="Поиск..."/>
+          </div>
+        </div>
         <div className="perfume d-flex">
           <div className="card">
+            <div className="favorite">
+              <img src="/img/heart2.svg" alt="heart1"/>
+            </div>
             <img width={133} height={112} src="/img/1.jpg" alt="1"/>
             <h5>PANI WALEWSKA <br/> Classic духи</h5>
             <div className="d-flex justify-between align-center">
@@ -37,6 +47,9 @@ function App() {
             </div>
           </div>
           <div className="card">
+          <div className="favorite">
+              <img src="/img/heart1.svg" alt="heart1"/>
+            </div>
             <img width={133} height={112} src="/img/2.jpg" alt="1"/>
             <h5>ANTONIO BANDERAS <br/> Blue Seduction</h5>
             <div className="d-flex justify-between align-center">
@@ -50,6 +63,9 @@ function App() {
             </div>
           </div>
           <div className="card">
+          <div className="favorite">
+              <img src="/img/heart1.svg" alt="heart1"/>
+            </div>
             <img width={133} height={112} src="/img/3.jpg" alt="1"/>
             <h5>Lanvin Eclat <br/> D'Arpege</h5>
             <div className="d-flex justify-between align-center">
@@ -63,6 +79,9 @@ function App() {
             </div>
           </div>
           <div className="card">
+          <div className="favorite">
+              <img src="/img/heart1.svg" alt="heart1"/>
+            </div>
             <img width={133} height={112} src="/img/4.jpg" alt="1"/>
             <h5>GIORGIO ARMANI <br/> Acqua di Gioia</h5>
             <div className="d-flex justify-between align-center">
