@@ -2,7 +2,49 @@
 function App() {
   return (
     <div className="wrapper clear">
-      
+      <div className="overlay">
+        <div className="drawer">
+          <h2 className="mb-30">Корзина</h2>
+          <div className="items">
+            <div className="cartItem d-flex align-center mb-20">
+              <img className="mr-20" width={70} height={70} src="/img/1.jpg" alt="1"/>
+              <div className="mr-20">
+                <p className="mb-5">PANI WALEWSKA <br/> Classic духи</p>
+                <b>8 199 руб.</b>
+              </div>
+              <img className="removeBtn" src="/img/remove.svg" alt="remove"/>
+            </div>
+            <div className="cartItem d-flex align-center mb-20">
+              <img className="mr-20" width={70} height={70} src="/img/1.jpg" alt="1"/>
+              <div className="mr-20">
+                <p className="mb-5">PANI WALEWSKA <br/> Classic духи</p>
+                <b>8 199 руб.</b>
+              </div>
+              <img className="removeBtn" src="/img/remove.svg" alt="remove"/>
+            </div>
+            <div className="cartItem d-flex align-center mb-20">
+              <img className="mr-20" width={70} height={70} src="/img/1.jpg" alt="1"/>
+              <div className="mr-20">
+                <p className="mb-5">PANI WALEWSKA <br/> Classic духи</p>
+                <b>8 199 руб.</b>
+              </div>
+              <img className="removeBtn" src="/img/remove.svg" alt="remove"/>
+            </div>
+          </div>
+          <ul className="cartTotalBlock">
+            <li className="d-flex">
+              <span>Итого:</span>
+              <div></div>
+              <b>22050 руб.</b>
+            </li>
+            <li className="d-flex">
+              <span>Налог 5%</span>
+              <div></div>
+              <b>1070 руб.</b>
+            </li>
+          </ul>
+        </div>
+      </div>
       <header className="d-flex justify-between align-center">
         <div className="headerLeft d-flex align-center">
           <img width={40} height={40} src="/img/logo.png" alt="logo"/>
