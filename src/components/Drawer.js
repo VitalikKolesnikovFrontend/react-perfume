@@ -1,35 +1,22 @@
-function Drawer(props) {
+function Drawer({ onClose , items = [] }) {
     return (
         
       <div className="overlay">
         <div className="drawer">
-        <h2 className="d-flex justify-between mb-30">Корзина <img onClick={props.onClose} className="removeBtn cu-p" src="/img/remove.svg" alt="remove"/></h2>
+        <h2 className="d-flex justify-between mb-30">Корзина <img onClick={onClose} className="removeBtn cu-p" src="/img/remove.svg" alt="remove"/></h2>
         
         <div className="items">
-          <div className="cartItem d-flex align-center mb-20">
-            <img className="mr-20" width={70} height={70} src="/img/1.jpg" alt="1"/>
-            <div className="mr-20">
-              <p className="mb-5">PANI WALEWSKA <br/> Classic духи</p>
-              <b>8 199 руб.</b>
-            </div>
-            <img className="removeBtn" src="/img/remove.svg" alt="remove"/>
-          </div>
-          <div className="cartItem d-flex align-center mb-20">
-            <img className="mr-20" width={70} height={70} src="/img/1.jpg" alt="1"/>
-            <div className="mr-20">
-              <p className="mb-5">PANI WALEWSKA <br/> Classic духи</p>
-              <b>8 199 руб.</b>
-            </div>
-            <img className="removeBtn" src="/img/remove.svg" alt="remove"/>
-          </div>
-          <div className="cartItem d-flex align-center mb-20">
-            <img className="mr-20" width={70} height={70} src="/img/1.jpg" alt="1"/>
-            <div className="mr-20">
-              <p className="mb-5">PANI WALEWSKA <br/> Classic духи</p>
-              <b>8 199 руб.</b>
-            </div>
-            <img className="removeBtn" src="/img/remove.svg" alt="remove"/>
-          </div>
+          {items.map((i) => (
+                     <div className="cartItem d-flex align-center mb-20">
+                   
+                      <img className="mr-20" width={70} height={70} src={i.image} alt="1"/>
+                      <div className="mr-20 flex">
+                        <p className="mb-5">{i.title}<br/> Classic духи</p>
+                        <b>{i.price}руб.</b>
+                      </div>
+                      <img className="removeBtn" src="/img/remove.svg" alt="remove"/>
+                    </div>
+          ))}
         </div>
         <div className="cartTotalBlock">
           <ul>
