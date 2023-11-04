@@ -1,3 +1,4 @@
+import React from "react";
 import  Card  from "./components/Card";
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
@@ -24,7 +25,12 @@ function App() {
         </div>
         <div className="perfume d-flex">
           {arr.map((i) => (
-            <Card title={i.title} price={i.price} image={i.image} onClick={() => console.log(i)} />
+            <Card 
+            title={i.title} 
+            price={i.price} 
+            image={i.image} 
+            onFavorite={() => console.log('Добавили в закладки')} 
+            onPlus={() => console.log('Нажали на плюс')} />
           ))}
         </div>
       </div>
