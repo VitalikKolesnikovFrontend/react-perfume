@@ -24,7 +24,7 @@ function App() {
         </div>
         <div className="perfume d-flex">
           {arr.map((i) => (
-            <Card title={i.title} price={i.price} image={i.image} />
+            <Card title={i.title} price={i.price} image={i.image} onClick={() => console.log(i)} />
           ))}
         </div>
       </div>
