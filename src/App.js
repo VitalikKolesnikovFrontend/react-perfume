@@ -2,6 +2,13 @@ import  Card  from "./components/Card";
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
 
+const arr = [
+  {title: 'PANI WALEWSKA', price: 12999, image: '/img/1.jpg'},
+  {title: 'ANTONIO BANDERAS', price: 10099, image: '/img/2.jpg'},
+  {title: 'LANVIN Eclat', price: 12999, image: '/img/3.jpg'},
+  {title: 'Giorgio Armani ', price: 10099, image: '/img/4.jpg'},
+]
+
 function App() {
   return (
     <div className="wrapper clear">
@@ -16,10 +23,9 @@ function App() {
           </div>
         </div>
         <div className="perfume d-flex">
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
+          {arr.map((i) => (
+            <Card title={i.title} price={i.price} image={i.image} />
+          ))}
         </div>
       </div>
     </div>
